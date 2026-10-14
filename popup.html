@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>每日成长</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <div class="brand-text">
+          <h1>每日成长</h1>
+          <p class="subtitle">Daily Growth · 一点一滴，积少成多</p>
+        </div>
+      </div>
+      <p class="date" id="todayDate"></p>
+    </header>
+
+    <section class="progress-card" aria-labelledby="progressTitle">
+      <div class="progress-top">
+        <h2 id="progressTitle">今日进度</h2>
+        <p class="progress-count">
+          <span id="doneCount">0</span> / <span id="totalCount">0</span>
+        </p>
+      </div>
+      <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <p class="progress-hint" id="progressHint">添加习惯，开始今天的成长吧</p>
+    </section>
+
+    <section class="add-section" aria-label="添加习惯">
+      <form id="addForm" class="add-form" autocomplete="off">
+        <input
+          type="text"
+          id="habitInput"
+          class="habit-input"
+          placeholder="输入新习惯，例如：阅读 30 分钟"
+          maxlength="30"
+        />
+        <button type="submit" class="btn-add" id="addBtn">添加</button>
+      </form>
+      <p class="form-error" id="formError" hidden></p>
+    </section>
+
+    <section class="list-section" aria-labelledby="listTitle">
+      <h2 id="listTitle" class="list-title">今日习惯</h2>
+      <ul class="habit-list" id="habitList"></ul>
+      <div class="empty-state" id="emptyState">
+        <p class="empty-title">还没有习惯</p>
+        <p class="empty-desc">在上方输入并添加，开始记录你的每日成长</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

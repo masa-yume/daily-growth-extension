@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="每日成长 Daily Growth —— 简洁美观的 Chrome 习惯打卡插件，记录点滴成长。" />
+  <title>每日成长 Daily Growth — 官方网站</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav-bar">
+      <a class="nav-brand" href="#top" aria-label="每日成长首页">
+        <img src="images/logo.png" alt="" width="32" height="32" class="nav-logo" />
+        <span class="nav-brand-name">每日成长</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="打开菜单">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="navMenu" aria-label="主导航">
+        <a href="#intro">介绍</a>
+        <a href="#features">功能</a>
+        <a href="#preview">界面</a>
+        <a href="#guide">教程</a>
+        <a class="nav-cta" href="download/daily-growth-extension.zip" download>下载插件</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="hero-brand">每日成长 Daily Growth</p>
+        <h1 class="hero-title">一点一滴，积少成多</h1>
+        <p class="hero-desc">
+          一款简洁美观的 Chrome 习惯打卡插件。在浏览器工具栏随时记录今日习惯，数据保存在本地，清爽不打扰。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="download/daily-growth-extension.zip" download>
+            下载插件
+          </a>
+          <a class="btn btn-ghost btn-lg" href="#guide">查看安装教程</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="intro">
+      <div class="container narrow">
+        <h2 class="section-title">插件介绍</h2>
+        <p class="section-lead">
+          「每日成长」帮助你用最小的操作，坚持每天的小目标。无需账号、无需联网同步，打开弹窗即可打卡；跨日后自动刷新当日进度，习惯列表会一直保留。
+        </p>
+        <div class="intro-points">
+          <div class="intro-point">
+            <strong>本地存储</strong>
+            <span>使用 chrome.storage.local，刷新或重启浏览器后数据仍在</span>
+          </div>
+          <div class="intro-point">
+            <strong>轻量清爽</strong>
+            <span>原生 HTML / CSS / JS，无多余权限，适合日常与课程展示</span>
+          </div>
+          <div class="intro-point">
+            <strong>中文界面</strong>
+            <span>奶油白与鼠尾草绿配色，一眼看懂今日完成进度</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="features">
+      <div class="container">
+        <h2 class="section-title">核心功能</h2>
+        <p class="section-lead">围绕「添加、打卡、进度」三件事，把习惯管理做得足够简单。</p>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">＋</div>
+            <h3>添加习惯</h3>
+            <p>输入习惯名称即可加入列表，支持查重与字数提示，避免重复创建。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">✓</div>
+            <h3>一键打卡</h3>
+            <p>点击圆圈完成打卡，再点一次即可取消，灵活调整今日状态。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">％</div>
+            <h3>进度可见</h3>
+            <p>实时显示今日完成数量与进度条，完成全部习惯时给予鼓励提示。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">×</div>
+            <h3>管理列表</h3>
+            <p>随时删除不再需要的习惯，对应打卡记录同步清理，保持列表干净。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="preview">
+      <div class="container">
+        <h2 class="section-title">插件界面</h2>
+        <p class="section-lead">弹窗界面紧凑清晰，打开就能看到日期、进度与今日习惯。</p>
+        <div class="preview-wrap">
+          <div class="popup-mock" role="img" aria-label="每日成长插件弹窗界面示意">
+            <div class="mock-header">
+              <div class="mock-brand">
+                <span class="mock-mark"></span>
+                <div>
+                  <p class="mock-title">每日成长</p>
+                  <p class="mock-sub">Daily Growth · 一点一滴，积少成多</p>
+                </div>
+              </div>
+              <p class="mock-date">2026年10月14日 星期三</p>
+            </div>
+            <div class="mock-progress">
+              <div class="mock-progress-top">
+                <span>今日进度</span>
+                <span><b>2</b> / 3</span>
+              </div>
+              <div class="mock-bar"><div class="mock-fill" style="width:67%"></div></div>
+              <p class="mock-hint">已完成 67%，继续加油</p>
+            </div>
+            <div class="mock-add">
+              <span class="mock-input">输入新习惯，例如：阅读 30 分钟</span>
+              <span class="mock-btn">添加</span>
+            </div>
+            <p class="mock-list-label">今日习惯</p>
+            <ul class="mock-list">
+              <li class="done"><span class="mock-check checked"></span><span>晨间拉伸</span></li>
+              <li class="done"><span class="mock-check checked"></span><span>阅读 30 分钟</span></li>
+              <li><span class="mock-check"></span><span>整理桌面</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="guide">
+      <div class="container">
+        <h2 class="section-title">使用教程</h2>
+        <p class="section-lead">下载压缩包后，在 Chrome 中以开发者模式加载即可使用。</p>
+        <ol class="steps">
+          <li>
+            <span class="step-num">1</span>
+            <div>
+              <h3>下载插件</h3>
+              <p>点击下方按钮，下载 <code>daily-growth-extension.zip</code> 到本地。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <div>
+              <h3>解压文件夹</h3>
+              <p>解压后得到 <code>daily-growth-extension</code> 文件夹，其中包含 <code>manifest.json</code> 等文件。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <div>
+              <h3>打开扩展程序页</h3>
+              <p>在 Chrome 地址栏输入 <code>chrome://extensions/</code>，打开右上角「开发者模式」。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">4</span>
+            <div>
+              <h3>加载并开始打卡</h3>
+              <p>选择「加载已解压的扩展程序」，选中解压后的文件夹。工具栏出现图标后即可添加习惯并打卡。</p>
+            </div>
+          </li>
+        </ol>
+        <div class="guide-cta">
+          <a class="btn btn-primary btn-lg" href="download/daily-growth-extension.zip" download>
+            下载插件
+          </a>
+          <p class="guide-note">下载文件名：daily-growth-extension.zip</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="" width="28" height="28" />
+        <div>
+          <p class="footer-name">每日成长 Daily Growth</p>
+          <p class="footer-tag">简洁的 Chrome 习惯打卡插件</p>
+        </div>
+      </div>
+      <p class="footer-copy">仅供学习与课程作业展示使用 · 数据保存在本地浏览器</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
